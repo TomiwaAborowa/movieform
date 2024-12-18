@@ -91,7 +91,7 @@ export default function BookingForm() {
         Submit
       </button>
 
-      {/* Success message */}
+      {/* Success message testing it currently */}
       {successMessage && (
         <div className="mt-4 text-green-600 text-center">
           {successMessage}
