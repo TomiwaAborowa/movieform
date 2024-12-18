@@ -9,7 +9,7 @@ export default function BookingForm() {
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
   const [time, setTime] = useState('')
-  const [successMessage, setSuccessMessage] = useState('') // State for success message
+  const [successMessage, setSuccessMessage] = useState('')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -20,7 +20,7 @@ export default function BookingForm() {
         phone,
         time
       })
-      setSuccessMessage('Reservation made successfully!') // Set success message
+      setSuccessMessage('Reservation made successfully!')
       setName('')
       setEmail('')
       setPhone('')
@@ -30,6 +30,9 @@ export default function BookingForm() {
       alert('An error occurred. Please try again.')
     }
   }
+
+  // Debugging log
+  console.log('Rendering BookingForm:', { name, email, phone, time, successMessage });
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
