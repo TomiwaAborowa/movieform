@@ -14,6 +14,7 @@ export default function BookingForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     try {
+      console.log('Submitting data to Firestore:', { name, email,phone, time})
       await addDoc(collection(db, 'bookings'), {
         name,
         email,
@@ -26,8 +27,8 @@ export default function BookingForm() {
       setPhone('')
       setTime('')
     } catch (error) {
-      console.error('Error adding document: ', error)
-      alert('An error occurred. Please try again.')
+      console.error('Error adding document: ', error);
+      alert('An error occurred. Please try again.');
     }
   }
 
